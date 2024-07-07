@@ -31,7 +31,7 @@ public class PaymentService {
         String[] input = command.split(" ");
         switch (input[0]) {
             case "CASH_IN":
-                double amount = Double.parseDouble(parts[1]);
+                double amount = Double.parseDouble(input[1]);
                 accountService.addFunds(amount);
                 System.out.println("Your available balance: " + accountService.getBalance());
                 break;
